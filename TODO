@@ -1,0 +1,27 @@
+REVISIONS:-
+
+1. Improvement in clarity
+* The paper's abstract must be rewritten to emphasize the work's uniqueness and problem-solving focus
+❌ Remove places365 keyword 
+(WORKING--ON) Opensource code
+* Section 1 (Introduction) fails to clearly articulate the innovation of MADETFE's architecture or technical strategy.
+* Numerous abbreviations are used without first defining their full English names, impairing readability. 
+* Figures suffer from unreadable small text, disorganized layouts, and low clarity
+* Experimental setup details—including hardware/software environments and hyperparameters—are entirely missing, which invalidates reproducibility
+* Need “RELATED WORK” section
+* A separate "Problem Definition" subsection is required to mathematically formalize the image inpainting task addressed by MADETFE. 
+* Add section “ablation experiments”
+* Experimental results are presented but not analyzed in depth, failing to form a logical loop with the abstract and introduction
+* Tell abt optimiser used
+* The authors must add an experiment using the AdaBoB optimizer (code: https://gitee.com/frontxiang/torch_adabob.git, DOI: 10.1016/j.patcog.2025.111819)
+* The paper provides no information about the optimizer used for training. While Adam is inferred (a common choice), this traditional optimizer may overstate MADETFE's performance, leading to biased results. The authors must add an experiment using the AdaBoB optimizer (code: https://gitee.com/frontxiang/torch_adabob.git, DOI: 10.1016/j.patcog.2025.111819), a state-of-the-art method that combines AdaBelief's gradient confidence mechanism (suppressing noise via gradient-historical average differences) and AdaBound's dynamic learning rate bounds (ensuring convergence). AdaBoB addresses AdaBelief's convex optimization instability and gradient outlier sensitivity while maintaining low computational cost. The authors should compare MADETFE with SOTA models under AdaBoB to verify if its advantages persist with a modern optimizer. 
+* The method described as an 'ensemble' in the paper is fundamentally sequential post-processing rather than genuine ensemble learning.
+* Experimental analysis is overly superficial
+* The authors should adopt the Parameter Quantity Shifting-Fitting Performance (PQS-FP) coordinate system (doi: 10.1016/j.eswa.2023.121182; doi: 10.1016/j.eswa.2025.127248) to deepen this analysis. PQS-FP maps models to a quadrant system (Y-axis: \( Y=P-O \), where \( P \) = current parameters, \( O \) = ideal parameters; X-axis: parameter change direction) to identify fitting states (underfitting/overfitting) and performance trends. The authors can plot MADETFE variants (e.g., combiner with different layer counts) or comparison models in PQS-FP to explain why performance improves/degrades with parameter adjustments—e.g., whether reducing MAT's transformer layers moves the model from "overfitting enhancement" (Quadrant I) to "overfitting alleviation" (Quadrant II
+* Future work is overly vague and unlinked to MADETFE's known limitations
+* The chapter structure is disorganized: dataset description (Places365) is incorrectly placed in Section 4 (Proposed Approach) but belongs at the start of Section 5 (Experimentation), as datasets are experimental setup components. Additionally, Section 5 must include subsections such as "5.1 Dataset Description," "5.2 Hardware/Software Environment," and "5.3 Hyperparameter Settings" to organize experimental content and improve readability.  
+* Training curves are absent,
+* The authors must add plots of loss and key metrics (LPIPS, SSIM) over training epochs for MADETFE and baselines.
+* The paper's English is unprofessional (e.g., grammatical errors, awkward phrasing) and lacks conciseness
+* he paper's logic is disjointed (e.g., weak connections between introduction's problem statement and proposed solutions), contributions are poorly summarized (no explicit list at the end of the introduction), and content is redundant (repeated LaMa/MAT descriptions in Sections 1 and 4).
+* Algorithm pseudocode (e.g., MADETFE's step-by-step inference) is non-standard, lacking essential elements: "Algorithm" label, input/output definitions, standard control keywords (e.g., "for," "if"), and indentation for code blocks.

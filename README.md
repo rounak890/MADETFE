@@ -4,9 +4,7 @@ Official code of MADETFE (Mask Aware Dual Expert with Transformers and FFC based
 
 although this is not neccesary but this repo also might be containing something:- https://github.com/rounak890/image_blend_data/tree/master
 
-if you think it have something then keeep it else delete it 
-
-
+if you think it have something then keeep it else delete it
 
 ## notebooks which i think can be useful
 
@@ -17,3 +15,30 @@ if you think it have something then keeep it else delete it
 4. inpainting_premade :- conatins code where i made the inference from the lama model and stored them on gdrive
 5. MAT.ipynb - shows the inference of mat imgs and dont show there storage to gdrive as there were some error so to present it i will first need to edit it
 6. lama_mat_multiscale_ensemble :- good to show to show experimentations as there i had tried different combination techniques for lama and mat imgs, but again it have diff in no. of imgs of lama(22-27k) and MAT(7300)
+
+
+
+## RESOUCES
+
+
+UNET Pretrained Weights :- !gdown 1M_qtAZ0X7v97jZL3w6DM0zkXCcfztF-k 
+
+LaMa Denoiser Pretrained weights :- !gdown 1K6JDi8l2QHYpHSmXZUYowEoFWAI60LYz
+
+Final Denoiser Pretrained weights :- !gdown 1MoOIfk4j-1jrRIVDYgpmv6I_IixUYJIz
+
+LaMa Infered Images(36,500) :- )!gdown 1m5dd3hd51p-EDHj05Pqsgspoiy5Gs6f_ 
+
+MAT infered Images(First 17091) :- !gdown 1kUMW5pec4JVR0AKMkH49aoIOTGnnPmuP
+
+MAT infered Images(rest) :- !gdown 154biIksdcBovAmEDvARfg5V1HPZQNZVP
+
+Masks(36,500) :- !gdown 14-0t8X0pZBv_tyhs-PxNISdokKqO-aUN 
+
+Train Data(20 imgs each scene) :- !gdown 13otq0aAzCB9l9MIZpJhOJACIJeboS0NY
+
+
+
+# Executing
+
+refer to train and test notebook
