@@ -39,6 +39,20 @@ Train Data(20 imgs each scene) :- !gdown 13otq0aAzCB9l9MIZpJhOJACIJeboS0NY
 
 
 
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+For the pretrained models that we have used for the obtaining the LaMa and MAT infered images, below are the links and version that we used
+
+1. LaMa -> The weigths were trained on Places dataset (https://drive.google.com/drive/folders/1B2x7eQDgecTL0oh3LSIBDGj0fTxs6Ips)
+
+so the above one is the official link for LAMA resources also it includes all the weights available for the lama model and we have specifically used “LaMa Fourier(best.ckpt)” weight for our purpose
+
+2. MAT -> The weights were trained on Places Dataset(https://drive.google.com/uc?id=15gbGYCGZY__Hchja-wPbqZqGj431-8ih&confirm=t&uuid=5f9edf14-9450-433e-bf76-18d924e55578)
+
+filename is - “Places_512.pkl”
+
+NOTE - CURRENTLY(AT TIME OF PUBLISHING THIS PAPER), THE MODEL DOWNLOAD LINK OF MAT MODEL'S ARE NOT WORKING SO WE HAVE SERVED THE EARLIER DOWNLOADED MODEL FILE ON GOOGLE DRIVE AND PROVIDED ITS DOWNLOAD LINK
+
 # Executing
 
 refer to train and test notebook
